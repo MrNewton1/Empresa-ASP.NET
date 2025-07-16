@@ -1,40 +1,57 @@
 @page
 @model Empresa.Pages.CalcularSueldoModel
 @{
+    // Establece el título de la página en la pestaña del navegador.
     ViewData["Title"] = "Calcular Sueldo";
 }
 
+// Tarjeta principal que contiene el formulario y los resultados.
+// Se utilizan clases de Bootstrap para formato visual y responsividad.
 <div class="card shadow-sm rounded-3">
+  // Encabezado de la tarjeta con fondo primario y texto blanco.
   <div class="card-header bg-primary text-white">
     <h2 class="h5 mb-0">Cálculo de Sueldo Bruto por Hora</h2>
   </div>
+  // Cuerpo de la tarjeta donde se encuentra el formulario.
   <div class="card-body">
+    // Formulario para capturar los datos necesarios para el cálculo.
+    // 'novalidate' desactiva la validación HTML5 para usar validación del lado del servidor.
     <form method="post" novalidate>
+      // Campo para ingresar las horas trabajadas.
       <div class="mb-3 row">
         <label asp-for="HorasTrabajadas" class="col-sm-4 col-form-label">Horas trabajadas:</label>
         <div class="col-sm-8">
           <input asp-for="HorasTrabajadas" class="form-control" />
+          // Muestra mensajes de validación para el campo de horas trabajadas.
           <span asp-validation-for="HorasTrabajadas" class="text-danger small"></span>
         </div>
       </div>
+      // Campo para ingresar la tarifa por hora.
       <div class="mb-3 row">
         <label asp-for="TarifaHora" class="col-sm-4 col-form-label">Tarifa por hora:</label>
         <div class="col-sm-8">
           <input asp-for="TarifaHora" class="form-control" />
+          // Muestra mensajes de validación para el campo de tarifa por hora.
           <span asp-validation-for="TarifaHora" class="text-danger small"></span>
         </div>
       </div>
+      // Botón para enviar el formulario y realizar el cálculo.
       <button type="submit" class="btn btn-success">Calcular sueldo</button>
     </form>
   </div>
 
+  // Sección de resultados, visible solo si 'MostrarResultados' es verdadero.
   @if (Model.MostrarResultados)
   {
+    // Pie de la tarjeta que muestra los resultados del cálculo.
     <div class="card-footer bg-light">
       <h5>Resultados</h5>
       <ul class="list-unstyled mb-0">
+        // Muestra la cantidad de horas extra trabajadas.
         <li><strong>Horas extra:</strong> @Model.HorasExtra</li>
+        // Muestra la tarifa aplicada a las horas extra.
         <li><strong>Tarifa extra:</strong> @Model.TarifaExtraString</li>
+        // Muestra el sueldo bruto calculado.
         <li><strong>Sueldo bruto:</strong> @Model.SueldoBrutoString</li>
       </ul>
     </div>

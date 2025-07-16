@@ -1,12 +1,18 @@
 ﻿@page
 @model Empresa.Pages.IndexModel
 @{
+    // Establece el título de la página que se mostrará en la pestaña del navegador.
     ViewData["Title"] = "Bienvenido";
 }
 
+// Contenedor principal centrado usando utilidades de Bootstrap.
 <div class="text-center">
+    // Título principal de la página, utiliza la clase 'display-4' para mayor tamaño y énfasis.
     <h1 class="display-4">¡Bienvenido a Empresa!</h1>
+    // Descripción introductoria sobre la funcionalidad de la página.
     <p class="lead">Aquí podrás calcular tu sueldo bruto por hora de manera rápida y sencilla.</p>
+    // Botón de acción que dirige a la página de cálculo de sueldo.
+    // Incluye un ícono de calculadora usando Bootstrap Icons.
     <a class="btn btn-lg btn-success mt-3" asp-page="/CalcularSueldo">
       Empezar cálculo <i class="bi bi-calculator"></i>
     </a>

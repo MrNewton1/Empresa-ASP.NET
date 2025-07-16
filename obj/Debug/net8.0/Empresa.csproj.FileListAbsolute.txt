@@ -28,3 +28,4 @@
 /home/isaac/Descargas/Empresa/obj/Debug/net8.0/Empresa.pdb
 /home/isaac/Descargas/Empresa/obj/Debug/net8.0/Empresa.genruntimeconfig.cache
 /home/isaac/Descargas/Empresa/obj/Debug/net8.0/ref/Empresa.dll
+/home/isaac/Descargas/Empresa/obj/Debug/net8.0/Empresa.sourcelink.json

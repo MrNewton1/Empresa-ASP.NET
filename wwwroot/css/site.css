@@ -1,28 +1,43 @@
 /* site.css */
 
-/* Fondo suave para todo el sitio */
+/* 
+  Fondo suave para todo el sitio.
+  Se utiliza un color de fondo claro y un color de texto oscuro para mejorar la legibilidad.
+*/
 body {
   background-color: #f2f4f8;
   color: #343a40;
 }
 
-/* Encabezados */
+/* 
+  Encabezados principales y secundarios.
+  Se aplica una fuente moderna y legible.
+*/
 h2, h5 {
   font-family: 'Segoe UI', sans-serif;
 }
 
-/* Estilo de la card principal */
+/* 
+  Estilo de la card principal.
+  Se eliminan los bordes y se redondean las esquinas para un diseño más amigable.
+*/
 .card {
   border: none;
   border-radius: 1rem;
 }
 
-/* Sombras más suaves */
+/* 
+  Sombras más suaves para los elementos con clase 'shadow-sm'.
+  Mejora la percepción de profundidad sin ser invasivo.
+*/
 .shadow-sm {
   box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
 }
 
-/* Botón personalizado (opcional) */
+/* 
+  Botón personalizado para acciones principales.
+  Se utiliza una paleta de verdes para transmitir confianza y acción positiva.
+*/
 .btn-success {
   background-color: #00695c;
   border-color: #00695c;
