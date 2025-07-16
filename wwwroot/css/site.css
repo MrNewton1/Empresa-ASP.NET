@@ -1,0 +1,33 @@
+/* site.css */
+
+/* Fondo suave para todo el sitio */
+body {
+  background-color: #f2f4f8;
+  color: #343a40;
+}
+
+/* Encabezados */
+h2, h5 {
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Estilo de la card principal */
+.card {
+  border: none;
+  border-radius: 1rem;
+}
+
+/* Sombras más suaves */
+.shadow-sm {
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
+}
+
+/* Botón personalizado (opcional) */
+.btn-success {
+  background-color: #00695c;
+  border-color: #00695c;
+}
+.btn-success:hover {
+  background-color: #004d40;
+  border-color: #004d40;
+}

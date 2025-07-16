@@ -1,0 +1,13 @@
+﻿@page
+@model Empresa.Pages.IndexModel
+@{
+    ViewData["Title"] = "Bienvenido";
+}
+
+<div class="text-center">
+    <h1 class="display-4">¡Bienvenido a Empresa!</h1>
+    <p class="lead">Aquí podrás calcular tu sueldo bruto por hora de manera rápida y sencilla.</p>
+    <a class="btn btn-lg btn-success mt-3" asp-page="/CalcularSueldo">
+      Empezar cálculo <i class="bi bi-calculator"></i>
+    </a>
+</div>

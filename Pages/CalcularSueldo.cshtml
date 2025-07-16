@@ -1,0 +1,42 @@
+@page
+@model Empresa.Pages.CalcularSueldoModel
+@{
+    ViewData["Title"] = "Calcular Sueldo";
+}
+
+<div class="card shadow-sm rounded-3">
+  <div class="card-header bg-primary text-white">
+    <h2 class="h5 mb-0">Cálculo de Sueldo Bruto por Hora</h2>
+  </div>
+  <div class="card-body">
+    <form method="post" novalidate>
+      <div class="mb-3 row">
+        <label asp-for="HorasTrabajadas" class="col-sm-4 col-form-label">Horas trabajadas:</label>
+        <div class="col-sm-8">
+          <input asp-for="HorasTrabajadas" class="form-control" />
+          <span asp-validation-for="HorasTrabajadas" class="text-danger small"></span>
+        </div>
+      </div>
+      <div class="mb-3 row">
+        <label asp-for="TarifaHora" class="col-sm-4 col-form-label">Tarifa por hora:</label>
+        <div class="col-sm-8">
+          <input asp-for="TarifaHora" class="form-control" />
+          <span asp-validation-for="TarifaHora" class="text-danger small"></span>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-success">Calcular sueldo</button>
+    </form>
+  </div>
+
+  @if (Model.MostrarResultados)
+  {
+    <div class="card-footer bg-light">
+      <h5>Resultados</h5>
+      <ul class="list-unstyled mb-0">
+        <li><strong>Horas extra:</strong> @Model.HorasExtra</li>
+        <li><strong>Tarifa extra:</strong> @Model.TarifaExtraString</li>
+        <li><strong>Sueldo bruto:</strong> @Model.SueldoBrutoString</li>
+      </ul>
+    </div>
+  }
+</div>
